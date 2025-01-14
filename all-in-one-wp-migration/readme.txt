@@ -4,7 +4,7 @@ Tags: backup, transfer, copy, move, clone
 Requires at least: 3.3
 Tested up to: 6.7
 Requires PHP: 5.3
-Stable tag: 7.87
+Stable tag: 7.88
 License: GPLv2 or later
 
 Backup, transfer, copy, and move a site with 1-click. Quick, easy, and reliable.
@@ -98,14 +98,21 @@ All-in-One WP Migration is in full compliance with General Data Protection Regul
 See our [GDPR Compliant Privacy Policy here](https://www.iubenda.com/privacy-policy/946881).
 
 == Changelog ==
+= 7.88 =
+**Fixed**
+
+* Fixed an issue where the upload progress was stuck at 100%
+* Fixed an issue where the upload could not be cancelled before it was completed
+
+**Improved**
+
+* Improved user-facing messages to be friendlier, direct, consistent, and more informative.
+
 = 7.87 =
-**Added**
-
-* Validation to ensure archive names contain the .wpress extension
-
 **Fixed**
 
 * Resolved a vulnerability where error logs were publicly accessible with a known name by appending random affixes to error log filenames, making them unguessable. Error logs are now automatically deleted daily and during plugin updates. Special thanks to villu164 for responsibly disclosing this issue.
+* Resolved a vulnerability where an administrator user could inject arbitrary PHP code through specific inputs. This vulnerability requires administrator-level access to exploit, ensuring that unauthorized users cannot perform this action. Special thanks to Ryan Kozak for responsibly disclosing this issue.
 
 = 7.86 =
 **Fixed**
